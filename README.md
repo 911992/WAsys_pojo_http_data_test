@@ -4,7 +4,7 @@ Sample implementation of [WAsys_pojo_http_data](https://github.com/911992/WAsys_
 This repo implements the **HTTP Server Container** component required for WAsys_pojo_http_data repo, in order to test its default POJO filling and type parsing functionalities.
 
 ## Revision History
-Latest: Initial Release v0.1 (May 13, 2020) 
+Latest: Initial Release v0.1.1 (May 22, 2020) 
 
 Please refer to [release_note.md](./release_note.md) file
 
