@@ -10,6 +10,9 @@ Created on: May 16, 2020 4:25:15 PM
     @author https://github.com/911992
  
 History:
+    0.1.3 (20200524)
+        • Renamed get_params to get_param_vals, (refer to change v0.1.5 of WAsys_pojo_http_data repo)
+
     0.1.2 (20200524)
         • Removed the last edit part from the header comment(hard to keep update)
         • get_part_stream_at() now throws IOException (as the super type does, correcting method signature)
@@ -85,7 +88,7 @@ public class Sample_Request_Data_Handler_Adapter extends Request_Data_Handler_Ad
     }
 
     @Override
-    public String[] get_params(String arg_param_name) {
+    public String[] get_param_vals(String arg_param_name) {
         if (params == null || params.size() == 0) {
             return new String[0];
         }
