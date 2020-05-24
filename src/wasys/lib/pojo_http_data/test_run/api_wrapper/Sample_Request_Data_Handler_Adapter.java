@@ -6,14 +6,20 @@
  /*
 WAsys_pojo_http_data_test
 File: Sample_Request_Data_Handler_Adapter.java
-Created on: May 16, 2020 4:25:15 PM | last edit: May 16, 2020
+Created on: May 16, 2020 4:25:15 PM
     @author https://github.com/911992
  
 History:
+    0.1.2 (20200524)
+        • Removed the last edit part from the header comment(hard to keep update)
+        • get_part_stream_at() now throws IOException (as the super type does, correcting method signature)
+        • Updated get_part_size_at() functionality since dependent to get_part_stream_at() method
+
     initial version: 0.1(20200513)
  */
 package wasys.lib.pojo_http_data.test_run.api_wrapper;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Vector;
 import wasys.lib.pojo_http_data.api_wrapper.Request_Data_Handler_Adapter;
@@ -49,7 +55,7 @@ public class Sample_Request_Data_Handler_Adapter extends Request_Data_Handler_Ad
     }
 
     @Override
-    public InputStream get_part_stream_at(String arg_param, int arg_idx) {
+    public InputStream get_part_stream_at(String arg_param, int arg_idx) throws IOException {
         Local_Stream_Entry _res = file_at(arg_param, arg_idx);
         if (_res == null) {
             return null;
@@ -123,11 +129,11 @@ public class Sample_Request_Data_Handler_Adapter extends Request_Data_Handler_Ad
 
     @Override
     public long get_part_size_at(String arg_param, int arg_idx) {
-        InputStream _res = get_part_stream_at(arg_param, arg_idx);
-        if (_res == null) {
-            return -1;
-        }
         try {
+            InputStream _res = get_part_stream_at(arg_param, arg_idx);
+            if (_res == null) {
+                return -1;
+            }
             return _res.available();
         } catch (Exception e) {
             return -1;
