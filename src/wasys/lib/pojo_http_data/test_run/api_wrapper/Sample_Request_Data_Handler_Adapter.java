@@ -12,6 +12,7 @@ Created on: May 16, 2020 4:25:15 PM
 History:
     0.1.3 (20200524)
         • Renamed get_params to get_param_vals, (refer to change v0.1.5 of WAsys_pojo_http_data repo)
+        • Removed the last edit part from the file header (hard to track)
 
     0.1.2 (20200524)
         • Removed the last edit part from the header comment(hard to keep update)

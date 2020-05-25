@@ -4,7 +4,7 @@ Sample implementation of [WAsys_pojo_http_data](https://github.com/911992/WAsys_
 This repo implements the **HTTP Server Container** component required for WAsys_pojo_http_data repo, in order to test its default POJO filling and type parsing functionalities.
 
 ## Revision History
-Latest: Initial Release v0.1.3 (May 24, 2020) 
+Latest: Initial Release v0.1.6 (May 25, 2020) 
 
 Please refer to [release_note.md](./release_note.md) file
 
@@ -70,3 +70,12 @@ Thinking about a simple `GET` HTTP request
 **Entity(s)**: `Sample6_Entity`  
 **Expectation**: Fill the given entity, and then check if provided data is valid, if not mark the entity as failed.
 
+#### Sample 7: Global-Fast Cache Implementation Sample Entity  
+Thinking about a simple `GET` HTTP request  
+**Simulated Data**: `model=911&sub_model=992` , and `model=718&sub_model=Spyder`  
+**Main class**: `Sample7_Global_Fast_Cache_Entity`  
+**Entity(s)**: `Sample7_Entity`  , `Sample7_Entity_Child`  
+**Expectation(s)**:  
+* (besides the success filling op)  
+* Method `_api_ex_set_type_parse_result` get called by the parser with a non-null cache result. Keeping the cache object with **STATIC** related `cache` object
+* Method `_api_ex_get_type_parse_result` get called by the parser to grab the previously set cache to avoid another parse or context lookup.

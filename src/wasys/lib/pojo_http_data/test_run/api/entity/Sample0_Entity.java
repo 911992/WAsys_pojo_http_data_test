@@ -6,10 +6,13 @@
  /*
 WAsys_pojo_http_data_test
 File: Sample0_Entity.java
-Created on: May 16, 2020 11:45:55 PM | last edit: May 16, 2020
+Created on: May 16, 2020 11:45:55 PM
     @author https://github.com/911992
  
 History:
+    0.1.6(20200525)
+        • Removed the last edit part from the file header (hard to track)
+
     initial version: 0.1(20200513)
  */
 package wasys.lib.pojo_http_data.test_run.api.entity;
