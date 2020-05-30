@@ -1,10 +1,12 @@
 # WAsys_pojo_http_data_test
 Sample implementation of [WAsys_pojo_http_data](https://github.com/911992/WAsys_pojo_http_data) repo, for testing purpose
 
+![WAsys_pojo_http_data samples](./_docs/diagrams/social_media_image.svg)  
+
 This repo implements the **HTTP Server Container** component required for WAsys_pojo_http_data repo, in order to test its default POJO filling and type parsing functionalities.
 
 ## Revision History
-Latest: Initial Release v0.1.6 (May 25, 2020) 
+Latest: Initial Release v0.1.7 (May 31, 2020)  
 
 Please refer to [release_note.md](./release_note.md) file
 

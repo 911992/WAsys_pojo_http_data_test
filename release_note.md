@@ -4,6 +4,15 @@ repo: https://github.com/911992/WAsys_pojo_http_data_test
 Author: [911992](https://github.com/911992)  
 *(NOTE: following list carries mentionable(not all) changes. For detailed changes, check source code(s))*  
 
+**0.1.7** (May 31, 2020)
+
+0. Repo
+    * Added social media image (`social_media_image`) files.
+    * Updated `README.md`
+        * Added social media image to the top of article
+
+<hr/>
+
 **0.1.6** (May 25, 2020)  
 
 0. Sample 5 (Inner Fillable Entity) Now works as expected(bug-free) as the bug related to unexpected buggy global cache with `Fillable_Object_Adapter` fixed with WAsys_pojo_http_data v0.1.6
